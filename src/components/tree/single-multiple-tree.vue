@@ -1,6 +1,7 @@
 <template>
   <div>
     <Tree :data="data" :render="renderTree"></Tree>
+    <pre>{{ data }}</pre>
   </div>
 </template>
 
@@ -30,25 +31,6 @@ export default {
             }
           ]
         }]
-      }, {
-        expand: true,
-        title: '一1级 1',
-        checkBox: false,
-        radio: false,
-        children: [{
-          expand: true,
-          title: '二1级 1-1',
-          checkBox: false,
-          radio: false,
-          children: [
-            {
-              expand: true,
-              title: '三1级 1-1-2',
-              checkBox: false,
-              radio: false,
-            }
-          ]
-        }]
       }],
       checkStrictly: true
     }
@@ -64,14 +46,16 @@ export default {
     },
     changeStatus (data) {
       this.data = this.changeTreeData(this.data, data)
-      console.log(this.data)
     },
     changeTreeData (data, d) {
       let flag = false
       data.forEach((r) => {
         if (r.title === d.title) {
+          console.log(data)
           flag = d.checkBox
-          data.children = this.changeTreeStatus(r.children, flag)
+          if (r.children) {
+            data.children = this.changeTreeStatus(r.children, flag)
+          }
           return data
         }
         if (r.children && r.children.length && r.children !== 'null') {

@@ -30,7 +30,13 @@
     methods: {
       handleCheckBox (e) {
         if (e) {
-          this.data.radio = true
+          console.log(this.data)
+          if (this.data.children && this.data.children.length && this.data.children !== 'null') {
+            this.data.radio = true
+            this.data.checkBox = false
+          } else {
+            this.data.checkBox = true
+          }
         } else {
           this.data.radio = false
           this.$emit('changeStatus', this.data)
