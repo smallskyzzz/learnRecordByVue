@@ -30,6 +30,19 @@ export default {
               radio: false,
             }
           ]
+        }, {
+          expand: true,
+          title: '二级 1-2',
+          checkBox: false,
+          radio: false,
+          children: [
+            {
+              expand: true,
+              title: '三级 1-2-2',
+              checkBox: false,
+              radio: false,
+            }
+          ]
         }]
       }],
       checkStrictly: true

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Select v-model="selectedData" multiple @on-open-change="selectOpenChange">
+    <Select v-model="selectedData" multiple @on-open-change="selectOpenChange" transfer transfer-class-name="dsadsadsa">
       <Option v-for="(s, i) in arrayData" :key="i" :value="s.title" v-show="false">
         {{ s.title }}
       </Option>

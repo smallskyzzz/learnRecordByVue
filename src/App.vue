@@ -4,6 +4,7 @@
       <router-link to="/filter-tree">过滤tree</router-link>
       <router-link to="/single-multiple-tree">单选多选tree</router-link>
       <router-link to="/pull-down-tree">下拉tree</router-link>
+      <router-link to="/menu">Menu</router-link>
     </div>
     <router-view></router-view>
   </div>
