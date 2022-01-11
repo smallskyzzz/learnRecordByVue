@@ -7,10 +7,20 @@
       <router-link to="/menu">Menu</router-link>
     </div>
     <router-view></router-view>
+    <bus1></bus1>
+    <bus2></bus2>
   </div>
 </template>
+
 <script>
+import bus1 from "./components/bus/bus1";
+import bus2 from "./components/bus/bus2";
+
 export default {
+  components: {
+    bus1,
+    bus2
+  }
 }
 </script>
 
