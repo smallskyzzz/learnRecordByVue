@@ -5,6 +5,7 @@
       <router-link to="/single-multiple-tree">单选多选tree</router-link>
       <router-link to="/pull-down-tree">下拉tree</router-link>
       <router-link to="/menu">Menu</router-link>
+      <router-link to="/attrs">attrs</router-link>
     </div>
     <router-view></router-view>
     <bus1></bus1>
